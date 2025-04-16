@@ -1,0 +1,9 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Openrc init file for backgrounding ollam AI
+EAPI=8
+HOMEPAGE=https://ollama.com/
+KEYWORDS=~amd64
+RDEPEND=acct-user/ollama acct-group/ollama
+SLOT=0
+SRC_URI=https://codeberg.org/genix/local/src/branch/master/app-misc/ollama/files/ollama.init
+_md5_=63d9e82da74a9007a06fe69fe920961d
