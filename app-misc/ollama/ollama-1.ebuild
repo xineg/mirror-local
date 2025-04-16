@@ -11,7 +11,7 @@ KEYWORDS="~amd64"
 RDEPEND="acct-user/ollama acct-group/ollama"
 
 
-#S="${WORKDIR}"
+S="${WORKDIR}"
 
 src_unpack() {
 	default
