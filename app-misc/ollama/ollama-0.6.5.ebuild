@@ -10,7 +10,7 @@ HOMEPAGE="https://ollama.com/"
 SRC_URI="https://github.com/ollama/ollama/archive/refs/tags/v0.6.5.tar.gz https://ogenixo.github.io/mirror-local/vendor.tar.gz"
 SLOT="0"
 KEYWORDS="~amd64"
-#RDEPEND="acct-user/ollama acct-group/ollama"
+RDEPEND="acct-user/ollama acct-group/ollama"
 BDEOEND="dev-build/cmake dev-lang/go"
 
 
