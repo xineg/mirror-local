@@ -1,5 +1,5 @@
 
-EAPI=8
+EAPI=7
 
 inherit go-module
 
@@ -12,16 +12,21 @@ KEYWORDS="~amd64"
 BDEOEND="dev-build/cmake dev-lang/go"
 
 
-
-
-src_compile() {
-		cmake -B build
-		cmake --build build
-		go build -o ollama
+src_unpack() {
+		default
+		echo "current dir is $(pwd)"
+		cd "${S}" || or die "cd ISSUE"
+		ego mod vendor || or die "go mod vendor failed again  :P"
 }
 
+
+
+
+
+
+
+
 src_install() {
-		insinto /usr/bin/
 		doins ${WORKDIR}/${P}/ollama
 }
 
