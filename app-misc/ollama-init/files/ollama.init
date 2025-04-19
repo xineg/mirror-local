@@ -9,7 +9,7 @@
 
 name="Ollama  AI Server"
 description="Serves local AI Models using Ollama"
-command="/usr/local/bin/ollama"
+command="/usr/bin/ollama"
 command_user="ollama:ollama"
 command_args="serve"
 pidfile="/run/ollama.pid"

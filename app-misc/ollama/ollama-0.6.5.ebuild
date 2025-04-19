@@ -14,9 +14,13 @@ BDEOEND="dev-build/cmake dev-lang/go"
 
 src_unpack() {
 		default
-		echo "current dir is $(pwd)"
-		cd "${S}" || or die "cd ISSUE"
-		ego mod vendor || or die "go mod vendor failed again  :P"
+		#echo "current dir is $(pwd)"
+		mv vendor ${S}/
+}
+
+src_compile() {
+	cmake -B build
+	ego build -o ollama
 }
 
 
@@ -25,8 +29,8 @@ src_unpack() {
 
 
 
-
 src_install() {
-		doins ${WORKDIR}/${P}/ollama
+		dobin ollama
+		#${WORKDIR}/${P}/ollama
 }
 
