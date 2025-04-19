@@ -16,7 +16,6 @@ BDEOEND="dev-build/cmake dev-lang/go"
 
 src_unpack() {
 		default
-		#echo "current dir is $(pwd)"
 		mv vendor ${S}/
 }
 
