@@ -879,6 +879,33 @@ chromium_configure() {
 
 	local myconf_gn=""
 
+		local my_fast_gn_flags=(
+  "is_debug=false"
+  "symbol_level=0"
+  "blink_symbol_level=0"
+  "use_gnome_keyring=false"
+  "enable_nacl=false"
+  "enable_swiftshader=false"
+  "enable_vr=false"
+  "use_kerberos=false"
+  "enable_widevine=true"
+  "proprietary_codecs=true"
+  "use_gio=false"
+  "use_system_libvpx=false"
+  "use_allocator_shim=false"
+  "use_custom_libcxx=false"
+  "use_system_freetype=false"
+  "use_system_harfbuzz=false"
+  "use_system_libpng=false"
+  "use_system_zlib=false"
+  "use_system_libjpeg=false"
+  "use_ozone=true"
+  "ozone_platform_wayland=true"
+  "ozone_platform_x11=false"
+  "use_x11=false"
+)
+
+
 	if use !bundled-toolchain; then
 		# We already forced the "correct" clang via pkg_setup
 
@@ -1209,6 +1236,10 @@ chromium_configure() {
 	set -- gn gen --args="${myconf_gn} ${EXTRA_GN}" out/Release
 	echo "$@"
 	"$@" || die
+
+
+		myconf_gn+=("${my_fast_gn_flags[@]}")
+
 }
 
 src_configure() {
