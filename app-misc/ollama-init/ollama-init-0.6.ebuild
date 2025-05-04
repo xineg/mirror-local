@@ -3,13 +3,13 @@
 
 EAPI=8
 
-DESCRIPTION="Openrc init file for backgrounding ollam AI"
-HOMEPAGE="https://ollama.com/"
-SRC_URI="https://ogenixo.github.io/mirror-local/web/ollama.init -> ollama.init"
+DESCRIPTION="Openrc init file for backgrounding ${PN} AI"
+HOMEPAGE="https://${PN}.com/"
+SRC_URI="https://ogenixo.github.io/mirror-local/web/${PN}.init -> ollama.init"
 SLOT="0"
 KEYWORDS="~amd64"
 RDEPEND="acct-user/ollama acct-group/ollama"
-
+PN=ollama
 
 S="${WORKDIR}"
 

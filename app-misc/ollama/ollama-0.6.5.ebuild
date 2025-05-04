@@ -8,6 +8,7 @@ inherit go-module
 DESCRIPTION="ollama AI"
 HOMEPAGE="https://ollama.com/"
 SRC_URI="https://github.com/ollama/ollama/archive/refs/tags/v0.6.5.tar.gz https://ogenixo.github.io/mirror-local/web/vendor.tar.gz"
+PV="0.6.6"
 SLOT="0"
 KEYWORDS="~amd64"
 RDEPEND="app-misc/ollama-init"
